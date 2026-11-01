@@ -1,0 +1,80 @@
+============================================================
+MLOps Experiment 5 - Task 1
+CKD Model Preparation
+============================================================
+
+DATASET
+------------------------------------------------------------
+Name              : Chronic Kidney Disease
+UCI Dataset ID    : 336
+Source            : UCI Machine Learning Repository - Chronic Kidney Disease (Dataset ID 336)
+Rows after clean  : 400
+Input features    : 24
+Target            : class
+Classes           : notckd, ckd
+
+PREPROCESSING
+------------------------------------------------------------
+Numeric imputation     : Median
+Numeric scaling        : StandardScaler
+Categorical imputation : Most Frequent
+Categorical encoding   : OneHotEncoder
+Unknown categories     : Ignored
+Pipeline preprocessing : Yes
+
+MISSING VALUES
+------------------------------------------------------------
+Missing values before pipeline:
+1012
+
+TRAIN / TEST SPLIT
+------------------------------------------------------------
+Training samples : 320
+Testing samples  : 80
+Test size        : 0.2
+Stratified       : Yes
+Random state     : 42
+
+MODEL
+------------------------------------------------------------
+Algorithm     : Logistic Regression
+Model version : 1.0.0
+
+EVALUATION
+------------------------------------------------------------
+Accuracy        : 0.9875
+Precision (CKD) : 1.0000
+Recall (CKD)    : 0.9800
+F1-score (CKD)  : 0.9899
+ROC-AUC         : 0.9987
+
+CLASSIFICATION REPORT
+------------------------------------------------------------
+              precision    recall  f1-score   support
+
+     Not CKD       0.97      1.00      0.98        30
+         CKD       1.00      0.98      0.99        50
+
+    accuracy                           0.99        80
+   macro avg       0.98      0.99      0.99        80
+weighted avg       0.99      0.99      0.99        80
+
+
+CONFUSION MATRIX
+------------------------------------------------------------
+Class order: notckd, ckd
+
+[[30  0]
+ [ 1 49]]
+
+SAVED MODEL
+------------------------------------------------------------
+C:\Users\kasya\OneDrive\Documents\EXPERIMENT-5-MLOps\models\ckd_pipeline.joblib
+
+MODEL RELOAD VERIFICATION
+------------------------------------------------------------
+SUCCESS - Saved pipeline loaded successfully.
+SUCCESS - Reloaded pipeline produced identical
+predictions on the test set.
+
+============================================================

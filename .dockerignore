@@ -1,0 +1,16 @@
+.venv
+.git
+.gitignore
+__pycache__
+*.pyc
+*.pyo
+backups
+data
+src
+tests
+*.zip
+*.md
+reports/*.txt
+reports/sample_request.json
+reports/api_test_results.txt
+reports/api_prediction_response.json

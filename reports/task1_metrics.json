@@ -1,0 +1,58 @@
+{
+  "experiment": "MLOps Experiment 5 - Task 1",
+  "dataset": {
+    "name": "Chronic Kidney Disease",
+    "uci_dataset_id": 336,
+    "source": "UCI Machine Learning Repository - Chronic Kidney Disease (Dataset ID 336)",
+    "rows_after_cleaning": 400,
+    "input_features": 24,
+    "target": "class",
+    "classes": [
+      "notckd",
+      "ckd"
+    ]
+  },
+  "preprocessing": {
+    "numeric_imputation": "median",
+    "numeric_scaling": "StandardScaler",
+    "categorical_imputation": "most_frequent",
+    "categorical_encoding": "OneHotEncoder",
+    "unknown_categories": "ignore",
+    "missing_values_before_pipeline": 1012,
+    "preprocessing_inside_pipeline": true
+  },
+  "split": {
+    "test_size": 0.2,
+    "train_samples": 320,
+    "test_samples": 80,
+    "stratified": true,
+    "random_state": 42
+  },
+  "model": {
+    "algorithm": "Logistic Regression",
+    "model_version": "1.0.0"
+  },
+  "metrics": {
+    "accuracy": 0.9875,
+    "precision_ckd": 1.0,
+    "recall_ckd": 0.98,
+    "f1_ckd": 0.98989898989899,
+    "roc_auc": 0.9986666666666667
+  },
+  "classification_report": "              precision    recall  f1-score   support\n\n     Not CKD       0.97      1.00      0.98        30\n         CKD       1.00      0.98      0.99        50\n\n    accuracy                           0.99        80\n   macro avg       0.98      0.99      0.99        80\nweighted avg       0.99      0.99      0.99        80\n",
+  "confusion_matrix_class_order": [
+    "notckd",
+    "ckd"
+  ],
+  "confusion_matrix": [
+    [
+      30,
+      0
+    ],
+    [
+      1,
+      49
+    ]
+  ],
+  "saved_model": "C:\\Users\\kasya\\OneDrive\\Documents\\EXPERIMENT-5-MLOps\\models\\ckd_pipeline.joblib"
+}
